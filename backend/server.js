@@ -3,6 +3,7 @@ console.log("RUNNING BACKEND FROM:", __dirname);
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require("dotenv").config(); // Load .env variables
 
 const app = express();
 app.use(cors());
@@ -12,7 +13,7 @@ app.use(express.json());
 mongoose.set("strictQuery", false);
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/properties?directConnection=true")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("Connection error:", err));
 
@@ -21,6 +22,6 @@ const propertyRoutes = require("./routes/propertyRoutes");
 app.use("/api/properties", propertyRoutes);
 
 // Start server
-app.listen(5000, () => {
-  console.log("Backend running on http://localhost:5000");
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Backend running on http://localhost:${process.env.PORT || 5000}`);
 });
