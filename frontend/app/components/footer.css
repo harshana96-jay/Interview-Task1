@@ -1,0 +1,119 @@
+.footer {
+  background: #e6e6e6;
+  color: #111;
+  padding: 50px 40px;
+  margin-top: 50px;
+  font-family: sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+}
+
+/* Titles */
+.footer h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Links */
+.footer p {
+  margin: 6px 0;
+  color: #444;
+  cursor: pointer;
+}
+
+.footer p:hover {
+  color: black;
+}
+
+/* Newsletter */
+.footer-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-input input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.footer-input button {
+  padding: 10px 16px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Follow Us centered */
+.follow-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;  
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social i {
+  font-size: 26px;
+  color: #555;              
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.social i:hover {
+  color: #000;
+}
+
+/* Bottom legal bar */
+.footer-legal {
+  margin-top: 30px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.footer-legal span {
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.footer-legal span:hover {
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

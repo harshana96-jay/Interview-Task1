@@ -1,0 +1,61 @@
+.properties-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.properties-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.property-card {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 15px;
+}
+
+.property-info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.filter-box {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.filter-select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+}
+
